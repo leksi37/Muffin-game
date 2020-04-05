@@ -13,6 +13,8 @@ public class movementScript : MonoBehaviour
     public float GravityScale;
 
     public Animator Animator;
+    public Transform Pivot;
+    public float RotateSpeed;
 
     private void Start()
     {
@@ -47,6 +49,12 @@ public class movementScript : MonoBehaviour
 
         MoveDirection.y = MoveDirection.y + (Physics.gravity.y * GravityScale * Time.deltaTime);
         Controller.Move(MoveDirection * Time.deltaTime);
+
+        //Move the player in different directions based on camera look direction
+        if(Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
+        {
+            transform.rotation = Quaternion.Euler(-90, 0f,Pivot.rotation.eulerAngles.y);
+        }
 
         Animator.SetBool("isGrounded", Controller.isGrounded);
         Animator.SetFloat("Speed", (Mathf.Abs(Input.GetAxis("Vertical")) + Mathf.Abs(Input.GetAxis("Horizontal"))));

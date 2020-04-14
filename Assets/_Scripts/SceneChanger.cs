@@ -10,6 +10,16 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Gameplay");
         SceneManager.GetActiveScene().GetRootGameObjects();
     }
+
+    public void PlayAgain()
+    {
+        Debug.Log("Play again");
+        SceneManager.UnloadScene("Gameplay");
+        SceneManager.LoadScene("Gameplay");
+        SceneManager.GetActiveScene().GetRootGameObjects();
+       
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -27,7 +37,7 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("");
     }
     public void Exit()
-    {
+    { 
         UnityEngine.Debug.LogError("Exit Game");
         Application.Quit();
     }

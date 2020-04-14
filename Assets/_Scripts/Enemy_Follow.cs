@@ -7,6 +7,7 @@ public class Enemy_Follow : MonoBehaviour
     // Start is called before the first frame update
     public Transform Player;
     private Rigidbody rb;
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();

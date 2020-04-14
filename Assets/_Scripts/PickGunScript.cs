@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnTriggerTakeGun : MonoBehaviour
+public class PickGunScript : MonoBehaviour
 {
     public GameObject GUIobj;
     public GameObject ToPick;

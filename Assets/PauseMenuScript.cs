@@ -17,15 +17,6 @@ public class PauseMenuScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("escape"))
-        {
-            PausePanel.SetActive(true);
-            GetComponent<movementScript>().enabled = false;
-            Camera.GetComponent<CameraFollow>().enabled = false;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-
-        }
         if (Input.GetKeyDown("p")) { 
         //{
         //    startingPosition = Camera.transform.position;

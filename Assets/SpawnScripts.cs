@@ -43,6 +43,15 @@ public class SpawnScripts : MonoBehaviour
                     spawnObjects[randomNum].transform.Rotate(0f, 180f, 0f);
                 }
                 spawnObjects[randomNum].transform.position = transforms[i].position;
+                if(randomNum == 2)
+                {
+                    spawnObjects[randomNum].transform.position = new Vector3(spawnObjects[randomNum].transform.position.x , spawnObjects[randomNum].transform.position.y + 5f, spawnObjects[randomNum].transform.position.z );
+                }
+                else if(randomNum == 0)
+                {
+                    Debug.Log("Spawned monster");
+                    spawnObjects[randomNum].transform.position = new Vector3(spawnObjects[randomNum].transform.position.x, spawnObjects[randomNum].transform.position.y -20f, spawnObjects[randomNum].transform.position.z);
+                }
                 spawnObjects[randomNum] = null;
             }
 

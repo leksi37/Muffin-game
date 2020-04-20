@@ -12,13 +12,14 @@ public class Enemy_Follow : MonoBehaviour
     void Start()
     {
         Donut = GetComponent<NavMeshAgent>();
+        transform.LookAt(Player.transform);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-            float distance = Vector3.Distance(transform.position, Player.transform.position); 
+        transform.LookAt(Player.transform);
+        float distance = Vector3.Distance(transform.position, Player.transform.position); 
         
             //Make donut run to player
 
@@ -26,8 +27,9 @@ public class Enemy_Follow : MonoBehaviour
             Vector3 pathToPlayer = transform.position - Player.transform.position;
 
             Vector3 newPosition = transform.position - pathToPlayer;
-           transform.rotation.SetEulerRotation(new Vector3(Player.transform.rotation.x, Player.transform.rotation.y+90f));
+            
+            
             Donut.SetDestination(newPosition);
-
+            
     }
 }

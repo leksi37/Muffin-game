@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: TreeLeavesEFGH_AS
   m_Shader: {fileID: 4800000, guid: ad3ec30af724e1942ae5148469c6bf88, type: 3}
   m_ShaderKeywords: _WORLDSPACEOFFSET_ON
@@ -81,7 +82,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.33
-    - _DarknessOnSundown: 0.742
+    - _DarknessOnSundown: 1
     - _DesaturateTranslucency: 0.09
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -95,7 +96,7 @@ Material:
     - _MotionSpeed: 2.99
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _SelfIllum: 0.502
+    - _SelfIllum: 0.666
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

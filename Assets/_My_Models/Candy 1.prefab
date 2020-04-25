@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6363083540691097051}
+  - component: {fileID: 205241897372385896}
+  - component: {fileID: 412642506386670696}
   m_Layer: 0
   m_Name: Candy 1
   m_TagString: Untagged
@@ -31,6 +33,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!205 &205241897372385896
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363083540691097060}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0.0054086447, y: 43.17432, z: 0.074042395}
+  m_Size: 6.4500046
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4392783552288353787}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4392783552288353787}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4392783552288353787}
+  - screenRelativeHeight: 0.05
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4392783552288353787}
+  - screenRelativeHeight: 0.025
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4392783552288353787}
+  m_Enabled: 1
+--- !u!65 &412642506386670696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6363083540691097060}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5217368, y: 8.120074, z: 0.34684753}
+  m_Center: {x: 0.00685063, y: 3.995051, z: 0.08349109}
 --- !u!1001 &2159894937848886555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,7 +96,7 @@ PrefabInstance:
     - target: {fileID: 2382175905835637248, guid: de6a823a54e726e4fa39f88e0d9b9695,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2382175905835637248, guid: de6a823a54e726e4fa39f88e0d9b9695,
         type: 3}
@@ -93,16 +143,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2382175905835637248, guid: de6a823a54e726e4fa39f88e0d9b9695,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382175905835637248, guid: de6a823a54e726e4fa39f88e0d9b9695,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2382175905835637248, guid: de6a823a54e726e4fa39f88e0d9b9695,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2382175905835664928, guid: de6a823a54e726e4fa39f88e0d9b9695,
         type: 3}
       propertyPath: m_Name
       value: MYCANDY
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 855381977167219662, guid: de6a823a54e726e4fa39f88e0d9b9695, type: 3}
+    - {fileID: 4512331415430809121, guid: de6a823a54e726e4fa39f88e0d9b9695, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: de6a823a54e726e4fa39f88e0d9b9695, type: 3}
 --- !u!4 &4392783552290647835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2382175905835637248, guid: de6a823a54e726e4fa39f88e0d9b9695,
+    type: 3}
+  m_PrefabInstance: {fileID: 2159894937848886555}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &4392783552288353787 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2382175905837930720, guid: de6a823a54e726e4fa39f88e0d9b9695,
     type: 3}
   m_PrefabInstance: {fileID: 2159894937848886555}
   m_PrefabAsset: {fileID: 0}

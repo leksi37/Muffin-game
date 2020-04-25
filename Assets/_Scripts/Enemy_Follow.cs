@@ -12,14 +12,13 @@ public class Enemy_Follow : MonoBehaviour
     void Start()
     {
         Donut = GetComponent<NavMeshAgent>();
-        transform.LookAt(Player.transform);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(Player.transform);
-        float distance = Vector3.Distance(transform.position, Player.transform.position); 
+        //float distance = Vector3.Distance(transform.position, Player.transform.position); 
         
             //Make donut run to player
 

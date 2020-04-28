@@ -7,7 +7,7 @@ public class Enemy_Follow : MonoBehaviour
 {
     private NavMeshAgent Donut;
     public GameObject Player;
-    public float DonutDistanceRun = 5f;
+    //public float DonutDistanceRun = 5f;
 
     void Start()
     {

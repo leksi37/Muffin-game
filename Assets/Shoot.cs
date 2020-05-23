@@ -9,6 +9,8 @@ public class Shoot : MonoBehaviour
     public float range = 100f;
     public bool isAimScreenOn;
     public Camera camera;
+    [SerializeField]
+    private ParticleSystem Flash;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class Shoot : MonoBehaviour
     void Fire()
     {
         RaycastHit hit;
+        Flash.Play();
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();

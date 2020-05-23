@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aim : MonoBehaviour
+public class CameraManager : MonoBehaviour
 {
     public GameObject AimCanvas;
-    public GameObject Camera, AimArm;
+    public GameObject FirstPersonCamera, Camera;
     public GameObject RightFoot, LeftFoot, LeftHand, RightHand, AttachedGun;
     public Animator animator;
 
-    public bool isAimScreenOn;
+    public bool isGunPicked;
 
     void Start()
     {
         AimCanvas.SetActive(false);
-        isAimScreenOn = false;
+        isGunPicked = false;
     }
 
     // Update is called once per frame
@@ -23,6 +23,8 @@ public class Aim : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            if (isGunPicked)
+            {
             if (AimCanvas.activeInHierarchy)
             {
                 AimCanvas.SetActive(false);
@@ -32,9 +34,8 @@ public class Aim : MonoBehaviour
                 RightHand.GetComponent<MeshRenderer>().enabled = true;
                 LeftHand.GetComponent<MeshRenderer>().enabled = true;
                 AttachedGun.SetActive(true);
-
-                AimArm.SetActive(false);
-                isAimScreenOn = false;
+                FirstPersonCamera.SetActive(false);
+                Camera.SetActive(true);
             }
             // && AttachedGun.activeInHierarchy
             else if (!(AimCanvas.activeInHierarchy) )
@@ -47,9 +48,11 @@ public class Aim : MonoBehaviour
                 LeftHand.GetComponent<MeshRenderer>().enabled = false;
                 AttachedGun.SetActive(false);
 
-                AimArm.SetActive(true);
-                isAimScreenOn = true;
+                FirstPersonCamera.SetActive(true);
+                Camera.SetActive(false);
             }
+            }
+            
 
             
         }

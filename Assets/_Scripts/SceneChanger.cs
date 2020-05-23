@@ -16,7 +16,6 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Play again");
         SceneManager.UnloadScene("Gameplay");
         SceneManager.LoadScene("Gameplay");
-        SceneManager.GetActiveScene().GetRootGameObjects();
        
     }
 
@@ -32,10 +31,10 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Pause");
     }
-    public void Continiue()
-    {
-        SceneManager.LoadScene("");
-    }
+    //public void Continiue()
+    //{
+    //    SceneManager.LoadScene("");
+    //}
     public void Exit()
     { 
         UnityEngine.Debug.LogError("Exit Game");

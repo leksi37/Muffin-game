@@ -7,6 +7,7 @@ public class PickGunScript : MonoBehaviour
     public GameObject GUIobj;
     public GameObject ToPick;
     public GameObject Picked;
+    public GameObject Cupcacke;
     void Start()
     {
         GUIobj.SetActive(false);
@@ -21,6 +22,7 @@ public class PickGunScript : MonoBehaviour
             {
                 ToPick.SetActive(false);
                 Picked.SetActive(true);
+                Cupcacke.GetComponent<CameraManager>().isGunPicked = true;
             }
         }    
     }

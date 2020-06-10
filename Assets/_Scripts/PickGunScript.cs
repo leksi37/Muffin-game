@@ -8,6 +8,7 @@ public class PickGunScript : MonoBehaviour
     public GameObject ToPick;
     public GameObject Picked;
     public GameObject Cupcacke;
+
     void Start()
     {
         GUIobj.SetActive(false);
@@ -20,15 +21,17 @@ public class PickGunScript : MonoBehaviour
             GUIobj.SetActive(true);
             if (GUIobj.activeInHierarchy == true && Input.GetButtonDown("Equip"))
             {
-                ToPick.SetActive(false);
+                GUIobj.SetActive(false);
                 Picked.SetActive(true);
                 Cupcacke.GetComponent<CameraManager>().isGunPicked = true;
+                Destroy(ToPick);
             }
         }    
     }
-    // Update is called once per frame
-    void OnTriggerExit()
+
+    void OnTriggerExit(Collider other)
     {
-        GUIobj.SetActive(false);
+        if (other.gameObject.tag == "Player")
+            GUIobj.SetActive(false);
     }
 }
